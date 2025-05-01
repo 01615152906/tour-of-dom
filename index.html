@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of Dom</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        li{
+            color: tomato;
+        }
+
+        #Fruits-title{
+            color: black;
+        }
+        .improtant-palces{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to my Dom</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsam reprehenderit commodi nam dolore saepe quam laboriosam quae autem libero at, modi rem. Suscipit aliquid provident deserunt corrupti libero! Molestias?</p>
+    <main>
+       <section>
+        <h1>my Awesome Dom de baba</h1>
+        <ul>
+            <li>jalali set</li>
+            <li>shafayet</li>
+            <li>bonobash</li>
+        </ul>
+       </section>
+       
+        <section>
+            <h1 id="Fruits-title">Fruits I like</h1>
+            <ul>
+                <li>apple</li>
+                <li>banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-title"> places I like to visit</h1>
+
+            <ul>
+                <li class="improtant-palces">Soondorban</li>
+                <li class="improtant-palces">bandarban</li>
+                <li class="improtant-palces">kataban</li>
+                <li class="improtant-palces"> shalbon</li>
+
+            </ul>
+        </section>
+    </main>
+
+<script src="Js/dom.js"></script>
+<script>
+    // const student = {
+    //     name: 'ABUL',
+    //     ID: 11,
+    //     study: function(time){
+    //         console.log(time, 'study kortese');
+
+    //     }
+    // }
+    // console.log('adding js inside the html  file')
+
+    const liCollection = document.getElementsByTagName('li');
+    // console.log(liCollection);
+
+    for(const li of liCollection){
+        console.log(li.innerText);
+
+    }
+
+    const allHeadings = document.getElementsByTagName('h1');
+
+    for(const h1 of allHeadings){
+        console.log(h1.innerText);
+    }
+    
+
+const fruitsTitle = document.getElementById('Fruits-title');
+ fruitsTitle.innerText = 'fruits changed by js'
+
+    const get = document.getElementsByClassName('improtant-palces');
+    for (const li of get){
+        console.log(li.innerText)
+    }
+
+
+
+</script>
+</body>
+</html>
+
