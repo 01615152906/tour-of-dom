@@ -8,7 +8,7 @@
     <title>Tour of Dom</title>
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        li{
+        .fruits-container li{
             color: tomato;
         }
 
@@ -25,7 +25,7 @@
     <header>
         <h1>Welcome to my Dom</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ipsam reprehenderit commodi nam dolore saepe quam laboriosam quae autem libero at, modi rem. Suscipit aliquid provident deserunt corrupti libero! Molestias?</p>
-    <main>
+    <main id="main-container">
        <section>
         <h1>my Awesome Dom de baba</h1>
         <ul>
@@ -35,28 +35,30 @@
         </ul>
        </section>
        
-        <section>
-            <h1 id="Fruits-title">Fruits I like</h1>
+        <section class="fruits-container">
+            <h1 id="Fruits-title" class="some-class random-class blue-bg">Fruits I like</h1>
             <ul>
                 <li>apple</li>
                 <li>banana</li>
                 <li>Carrot</li>
             </ul>
         </section>
-        <section>
+        <section id="places-container" class="large-text">
             <h1 id="places-title"> places I like to visit</h1>
 
-            <ul>
+            <ul id="places-list">
                 <li class="improtant-palces">Soondorban</li>
                 <li class="improtant-palces">bandarban</li>
                 <li class="improtant-palces">kataban</li>
-                <li class="improtant-palces"> shalbon</li>
+                <li id ="places-title"> shalbon</li>
 
             </ul>
         </section>
     </main>
 
 <script src="Js/dom.js"></script>
+<script src="Js/styling.js"></script>
+<script src="Js/append.js"></script>
 <script>
     // const student = {
     //     name: 'ABUL',
@@ -72,14 +74,14 @@
     // console.log(liCollection);
 
     for(const li of liCollection){
-        console.log(li.innerText);
+        // console.log(li.innerText);
 
     }
 
     const allHeadings = document.getElementsByTagName('h1');
 
     for(const h1 of allHeadings){
-        console.log(h1.innerText);
+        // console.log(h1.innerText);
     }
     
 
@@ -88,9 +90,24 @@ const fruitsTitle = document.getElementById('Fruits-title');
 
     const get = document.getElementsByClassName('improtant-palces');
     for (const li of get){
-        console.log(li.innerText)
+        // console.log(li.innerText)
     }
 
+
+    // querySelectorAll
+
+
+
+
+
+    const someli = document.querySelectorAll('.fruits-container li')
+    // console.log(someli);
+
+
+    for (const li of someli){
+        // console.log(li.innerText);
+
+    }
 
 
 </script>
